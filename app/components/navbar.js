@@ -20,7 +20,7 @@ export default function Navbar() {
   return (
     <nav className="flex flex-wrap items-center justify-between w-full py-4 px-4 text-lg text-gray-700 bg-white">
       <ul className="flex flex-wrap gap-4">
-        <li><Link href="/" className="hover:text-purple-400">Home</Link></li>
+        <li><Link href="/" className="hover:text-purple-400">Home 1</Link></li>
         <li><Link href="/blog" className="hover:text-purple-400">Blog</Link></li>
         <li><Link href="/products" className="hover:text-purple-400">Product</Link></li>
         <li><Link href="/users" className="hover:text-purple-400">User</Link></li>
