@@ -29,3 +29,20 @@ body {
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
 }
+
+header ul li:last-child {
+  margin-left: 30px;
+}
+
+header ul li:last-child a{
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+header ul li:last-child a img{
+  width: 30px;
+  height: 30px;
+  object-fit: cover;
+  border-radius: 50%;
+}

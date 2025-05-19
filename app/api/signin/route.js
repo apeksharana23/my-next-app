@@ -12,7 +12,7 @@ export async function POST(request) {
             const isMatch = await bcrypt.compare(password, user.password);
             if(isMatch){
                 const encodedKey = new TextEncoder().encode(process.env.JWT_SECRET);
-                const token = await new SignJWT({ id: user._id }).setProtectedHeader({ alg: 'HS256' }).setIssuedAt().setExpirationTime('7d').sign(encodedKey);
+                const token = await new SignJWT({ id: user._id.toString() }).setProtectedHeader({ alg: 'HS256' }).setIssuedAt().setExpirationTime('7d').sign(encodedKey);
                 return new Response(JSON.stringify({
                     status: true,
                     message: "User Sign In Successfully",

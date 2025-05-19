@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export function middleware(request) {
   let token = "", isAuthPage = false;
-  let authPages = ['/dashboard', '/profile', '/logout'];
+  let authPages = ['/dashboard', '/my-profile', '/logout'];
   const currentPage = request.nextUrl.pathname;
 
   if (authPages.includes(currentPage)) {
@@ -30,5 +30,5 @@ export function middleware(request) {
 }
 
 export const config = {
-  matcher: ['/dashboard/:path*', '/dashboard', '/signin', '/signup'],
+  matcher: ['/dashboard/:path*', '/dashboard', '/signin', '/signup', '/my-profile'],
 };

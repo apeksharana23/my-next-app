@@ -1,3 +1,0 @@
-1. If user have token and it is in auth page  - do nothing
-2. If user have token and it is in signin, signup or forgot password page - redirect to auth page
-3. If user have not token and it is in dashboard - redirect to signin page

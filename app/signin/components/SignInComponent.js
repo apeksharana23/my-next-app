@@ -8,7 +8,7 @@ import { useSetCookie } from 'cookies-next/client';
 import { AuthContext } from "@/app/providers/authProvider";
 
 export default function SignInComponent() {
-    const { setIsLoggedIn } = useContext(AuthContext);
+    const { setIsLoggedIn, setUser } = useContext(AuthContext);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
@@ -51,6 +51,7 @@ export default function SignInComponent() {
                     path: '/',
                 });
                 setIsLoggedIn(true);
+                setUser(data.data);
                 router.push('/dashboard');
             } else {
                 toast.error(data.message, notifySettings);
